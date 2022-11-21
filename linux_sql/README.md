@@ -1,27 +1,29 @@
 # Introduction
-(about 150-200 words)
-Discuss the design of the project. What does this project/product do? Who are the users? What are the technologies you have used? (e.g. bash, docker, git, etc..)
+The Jarvis Linux Cluster Administration (LCA) team manages a Linux cluster of 10 nodes/servers running CentOS 7. 
+The product monitor hardware specification for each node connected to the server and the data is stored in a RDBMS
+The user will have bash agent installed in their machine to monitor automatically every min their data
+Technologies : bash shell, docker, git, crontab, postgresql, linux command line, Intelliji
 
 # Quick Start
 Use markdown code block for your quick-start commands
-- Start a psql instance using psql_docker.sh
-- Create tables using ddl.sql
-- Insert hardware specs data into the DB using host_info.sh
-- Insert hardware usage data into the DB using host_usage.sh
-- Crontab setup
+- bash /home/centos/dev/jarvis_data_eng_Alex/linux_sql/scripts/psql_docker.sh start postgres password 
+- psql -h localhost -U postgres -d host_agent -f /home/centos/dev/jarvis_data_eng_Alex/linux_sql/sql/ddl.sql
+- bash /home/centos/dev/jarvis_data_eng_Alex/linux_sql/scripts/host_info.sh localhost 5432 host_agent postgres password
+- bash /home/centos/dev/jarvis_data_eng_Alex/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password
+- crontab -e -> * * * * * bash /home/centos/dev/jarvis_data_eng_Alex/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log 
 
 # Implemenation
-Discuss how you implement the project.
+We made a mvp (Mininum viable product) version of this product to showcase it functionality. 
 
 ## Architecture
 /home/centos/dev/jarvis_data_eng_Alex/linux_sql/Assets/Linux_Architecture_Diagram.drawio.png
 
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
-- psql_docker.sh
-- host_info.sh
-- host_usage.sh
-- crontab
+- psql_docker.sh: bash [PATH] start|stop|create "dbusername" "dbpassword"
+- host_info.sh: bash [PATH] "hostname" [PORT] "databasename" "username "password"
+- host_usage.sh: bash [PATH] "hostname" [PORT] "databasename" "username "password"
+- crontab: crontab -e (edit) crontab -l (list)
 - queries.sql (describe what business problem you are trying to resolve)
 
 ## Database Modeling
@@ -30,14 +32,12 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 - `host_usage`
 
 # Test
-How did you test your bash scripts DDL? What was the result?
+I tried to create/insert data into my database with the sql and did a SELECT * FROM table directly on the database to see if everything matched
 
 # Deployment
-How did you deploy your app? (e.g. Github, crontab, docker)
+crontab every min
 
 # Improvements
-Write at least three things you want to improve 
-e.g. 
-- handle hardware updates 
-- blah
-- blah
+- Better sql and shell scripting 
+- Navigate around in linux
+- tiem management

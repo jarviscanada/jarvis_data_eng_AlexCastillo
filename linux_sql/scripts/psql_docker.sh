@@ -6,7 +6,7 @@ db_password=$3
 
 sudo systemctl status docker || systemctl start docker
 
-docker container inspect $db_username
+docker container inspect "$db_username"
 container_status=$?
 
 case $cmd in
