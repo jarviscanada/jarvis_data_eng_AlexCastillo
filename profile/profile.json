@@ -1,0 +1,136 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Scholarship",
+        "100% grade in my Final Project"
+      ],
+      "degree": "Attestation Of College Studies",
+      "department": "Software/Game Development",
+      "duration": "2020-2022",
+      "school_name": "Institut Superieur D'Informatique"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Diploma of College Studies",
+      "department": "Natural Sciences",
+      "duration": "2015- 2018",
+      "school_name": "College Ahuntsic"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_AlexCastillo",
+  "highlighted_projects": [
+    {
+      "description": "For my Final Project, during my studies at ISI, I had to make a video game supervised by teachers with various planning software such as JIRA and GITHUB. In 2 and a half month, I was able to implement a lot of mechanics such as 2 player mode, combo system, an AI, an Online Mode with room making, Ranked Matchmaking, a training mode and various other features. I also hired people to help me as a team for features that were out of my programming expertise such as 2D artwork, 3D models and animations. We used TRELO to plan and manage the task of each member. I planned all my MILESTONES ahead with a SPRINT methodology. The project was made using Unity/C# and the animation were made with MAYA.",
+      "git_url": "https://github.com/morijin047/MvFighters",
+      "name": "MV FIghter Z"
+    },
+    {
+      "description": "An AI I made during my studies with c++. The Perceptron will collect a sample of data and classify it. It will split all of the dots in a biased way. It was visualized with the library SDL for c++. We made other AI with similar technologies and some little game in OPENGL to reflect those AI in action.",
+      "git_url": "https://github.com/morijin047/AI",
+      "name": "Machine Learning: Perceptron"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "We made our own cluster to be able to monitor each agent connected to the main database with Google Cloud Platform. The database was done in Postgresql and we used centOS7 and docker to create the system. The information was gattered using bash scripts and stored in the host database",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": [
+        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "Grep App: An app that could search in a given directory a matching regex expression and return all the matched lines in an output file of choice. We used Maven to build the app and Java to code."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/springboot",
+      "name": "Springboot App"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
+    },
+    {
+      "description": "",
+      "git_url": "/spark",
+      "name": "Spark"
+    },
+    {
+      "description": "",
+      "git_url": "/cloud_devops",
+      "name": "Cloud/DevOps"
+    }
+  ],
+  "name": "Alex Monchez-Castillo",
+  "others": [
+    {
+      "bullets": [
+        "Middle Year Program in highschool"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Won a fighting game tournament with 200 participant in it"
+      ],
+      "title": "Awards"
+    },
+    {
+      "bullets": [
+        "Anime/Mange/Movie enjoyer",
+        "Competitive/Casual gaming",
+        "Volunteer at various organization"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "At Jarvis, we received an appropriated formation for the industry requirement in software engeneering. We work everyday as if we are in a working environment and we acquired a lot of expertise in JAVA/LINUX and more.",
+      "duration": "2022-present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "Pro-Vert",
+      "description": "Eco Centre ST-Michel owned by PRO-VERT. Had to enforce the law to citizens and clean the terrain as a team of 5-6. At this job, I've learned to be very patient and how to work as a team efficiently. Those two characteristic are very essential to become a good programmer for me.",
+      "duration": "2018-2021",
+      "title": "Maintenance worker"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "c++",
+      "Python",
+      "HTML/CSS"
+    ],
+    "familiar": [
+      "React",
+      "Azure Cloud",
+      "Javascript",
+      "Blender",
+      "Photoshop"
+    ],
+    "proficient": [
+      "Java",
+      "c#",
+      "Unity",
+      "Agile/Scrum",
+      "Git"
+    ]
+  },
+  "summary": "My name is Alex Monchez-Castillo. I am 25 years old that graduated from Institut Superieur d'Informatique. I specialize in Web/Software/Game Development. I have embarked on a new journey at Jarvis in Novemeber 2022.\nFrom a young age, i was always draw to everything computer tech based and loved to mess with it. I have a lot of experience in modding games and software to my own liking and I would say this is where my passion for app making began. After being self-taught, I embarked on a journey to become the best programmer i can be."
+}
