@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="JavaGrepImp" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.grep.JavaGrepImp" />
+    <module name="grep" />
+    <option name="PROGRAM_PARAMETERS" value=".*Romeo D:\Users\Alex\Desktop\Work\jarvis_data_eng_AlexCastillo\core_java\grep\data  D:\Users\Alex\Desktop\Work\jarvis_data_eng_AlexCastillo\core_java\grep\out\grep.txt" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
