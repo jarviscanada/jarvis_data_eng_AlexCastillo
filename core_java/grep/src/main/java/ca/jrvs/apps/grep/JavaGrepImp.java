@@ -2,6 +2,10 @@ package ca.jrvs.apps.grep;
 
 
 
+import org.apache.log4j.BasicConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +19,7 @@ import java.util.regex.Pattern;
 
 public class JavaGrepImp implements  JavaGrep{
 
-    //final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
+    final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
 
     private String regex;
     private String rootPath;
@@ -26,6 +30,8 @@ public class JavaGrepImp implements  JavaGrep{
             throw new IllegalArgumentException("USAGE: Javagrep regex rootPath outputFile");
         }
 
+        BasicConfigurator.configure();
+
         JavaGrepImp javaGrepImp = new JavaGrepImp();
         javaGrepImp.setRegex(args[0]);
         javaGrepImp.setRootPath(args[1]);
@@ -35,7 +41,7 @@ public class JavaGrepImp implements  JavaGrep{
             javaGrepImp.process();
         } catch (Exception ex) {
             //javaGrepImp.logger.error("Error: Unable to process", ex);
-            JOptionPane.showMessageDialog(null, "Error: Unable to process", "JAVA GREP" , JOptionPane.INFORMATION_MESSAGE);
+            javaGrepImp.logger.error("Error: Unable to process", ex);
             System.exit(0);
         }
 
@@ -92,16 +98,17 @@ public class JavaGrepImp implements  JavaGrep{
 
     @Override
     public void writeToFile(List<String> lines) throws IOException {
-        File outputFile = new File(rootPath + "\\" + output);
+        File outputFile = new File(output);
+        FileWriter writer = new FileWriter(outputFile);
         for (String line : lines) {
             try {
-                FileWriter writer = new FileWriter(outputFile);
-                writer.write(line);
-                writer.close();
+                writer.write(line + "\n");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+        writer.close();
+        logger.info("File created in " + output);
     }
 
     @Override

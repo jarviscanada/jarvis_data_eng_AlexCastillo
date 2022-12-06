@@ -14,7 +14,7 @@ public class GrepDemoImp implements GrepDemo{
         String regexPattern = args[0];
         File folder = new File(args[1]);
         File[] listOfFiles = folder.listFiles();
-        File output = new File(args[1] + "\\" + args[2]);
+        File output = new File(args[2]);
 
         for (int i = 0; i < listOfFiles.length; i++) {
             File file = listOfFiles[i];
